@@ -1,0 +1,35 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>괄호닫기</title>
+</head>
+
+<body>
+
+  <script>
+    function check(s) {
+      let array = s.split("");
+      if (array[0] === ')') {
+        return false;
+      }
+      let cnt = 0
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === ')') {
+          cnt-=1;
+          if (cnt < 0) return false;
+        } else {
+          cnt +=1;
+        }
+      }
+      if (cnt === 0)
+        return true;
+      return false
+    }
+
+
+    const result = check("(()(");
+ </script>
+</body>
+
+</html>
