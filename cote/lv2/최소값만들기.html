@@ -1,0 +1,23 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>최솟값 만들기</title>
+</head>
+
+<body>
+
+  <script>
+    //프로그래머스 2단계 연습문제 최솟값만들기
+    const a=[1,4,2];
+    const b=[5,4,4];
+    let answer=0;
+    const asort=a.sort((a,b)=>a-b);
+    const bsort=b.sort((a,b)=>b-a);
+    for(let i=0 ; i <a.length;i++){
+      answer+=asort[i] * bsort[i];
+    }
+  </script>
+</body>
+
+</html>

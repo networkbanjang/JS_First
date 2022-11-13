@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>문자열 바꾸기</title>
+</head>
+
+<body>
+
+  <script>
+    //프로그래머스 2단계 연습문제 JadenCase 문자열 만들기
+    let s = "people  unFollowed me";
+    let answer = "";
+    const split = s.split(" ");
+
+    for(e of split){
+      if(e === ''){
+        answer+=" ";
+        continue;
+      }
+      (e.charCodeAt(0) <= 91) ?
+        answer += e.charAt(0) : answer += e.charAt(0).toUpperCase();
+
+      for (let i = 1; i < e.length; i++) {
+        (e.charCodeAt(i) >= 65 && e.charCodeAt(i) <= 90) ? answer += e.charAt(i).toLowerCase() : answer += e.charAt(i);
+
+      }answer+=" ";
+    }
+    answer=answer.slice(0,length-1);
+  </script>
+</body>
+
+</html>
